@@ -9,8 +9,8 @@
     <script>
         
         let max = 0;
-        let min = 0;
         let n = Number(prompt("masukkan angka [-99 untuk keluar] : "));
+        let min = n;
             while(n !== -99){                                 
                 // JIKA ANGKA YG DIMASUKKAN BUKAN 0 (dari n), MAKA TIDAK AKAN BERHENTI LOOP
                 if (n>max){
@@ -24,8 +24,8 @@
                 n = Number(prompt("masukkan angka? [-99 untuk keluar] : "));
                 
             }  
-            alert("Angka Terbesar adalah "+max);
-            alert("Angka Terkecil adalah "+min);
+            alert("Angka Terbesar adalah "+max+" Angka Terbesar adalah "+min);
+            
         
 
 
