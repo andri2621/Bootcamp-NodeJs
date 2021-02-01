@@ -10,17 +10,22 @@
         
         let max = 0;
         let min = 0;
-        let n = Number(prompt("masukkan angka [0 untuk keluar] : "));
+        let n = Number(prompt("masukkan angka [-99 untuk keluar] : "));
             while(n !== -99){                                 
                 // JIKA ANGKA YG DIMASUKKAN BUKAN 0 (dari n), MAKA TIDAK AKAN BERHENTI LOOP
                 if (n>max){
                     max = n
                 }
+
+                if (n<min){
+                    min = n
+                }
                 //akan selalu menampilkan prompt masukkan harga
-                n = Number(prompt("masukkan angka? [0 untuk keluar] : "));
+                n = Number(prompt("masukkan angka? [-99 untuk keluar] : "));
                 
             }  
             alert("Angka Terbesar adalah "+max);
+            alert("Angka Terkecil adalah "+min);
         
 
 

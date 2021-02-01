@@ -7,17 +7,20 @@
 </head>
 <body>
     <script>
-        var nilaiAwal = 1;
-        
-        while(nilaiAwal == 8){                                 
-          
-            
-            prompt("masukkan nilai siswa ke-"+nilaiAwal+" : ");
-            nilaiAwal++;
-            
+        let max = 0;
+        let i = 1;
+        let hitung = 0;
+        while(i <= 8){                                 
+            let inputNilai = Number(prompt("masukkan nilai siswa ke-"+i+" : "));
+            if(max < inputNilai){
+                max = inputNilai
+            }
+            if (inputNilai >= 90){
+                hitung++;
+            }
+        i++ 
         }  
-        
-        
+        alert("Nilai Terbesar adalah "+ max + " & jumlah siswa yang memiliki nilai >= 90 sebanyak " +hitung+ " siswa" );
     </script>
 </body>
 </html>
