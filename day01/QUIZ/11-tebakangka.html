@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n = 0;
+        angkaAcak = Math.floor(Math.random() * 10);;
+        let sum = 0;
+        
+        //mengacak angka
+        
+
+        //form input tebakan
+        n = Number(prompt("tebak angka antara 0-10 : "));
+        while(n !== angkaAcak){                                 
+        
+        //akan selalu menampilkan prompt jika nilai yg dimasukkan tidak sama dengan nilaiAcak
+        if (n < angkaAcak){
+            n = Number(prompt("terlalu kecil, masukkan lagi : "));
+        }else if( n> angkaAcak){
+            n = Number(prompt("terlalu besar, masukkan lagi : "));
+        }
+            
+        }  
+        alert("Kamu Benar! angkanya adalah "+angkaAcak);
+    </script>
+</body>
+</html>

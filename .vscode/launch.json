@@ -1,0 +1,16 @@
+{
+    "configurations": [
+        {
+            "type": "node-terminal",
+            "name": "Create JavaScript Debug Terminal",
+            "request": "launch",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "pwa-node",
+            "name": "Run Current File",
+            "request": "launch",
+            "program": "${workspaceFolder}\\day01\\01-functionscope\\03-whoami.js"
+        }
+    ]
+}

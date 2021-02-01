@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        let max = 0;
+        let n = Number(prompt("masukkan angka [0 untuk keluar] : "));
+            while(n !== 0){                                 
+                // JIKA ANGKA YG DIMASUKKAN BUKAN 0 (dari n), MAKA TIDAK AKAN BERHENTI LOOP
+                if (n>max){
+                    max = n
+                }
+                //akan selalu menampilkan prompt masukkan harga
+                n = Number(prompt("masukkan angka? [0 untuk keluar] : "));
+                
+            }  
+            alert("Angka Terbesar adalah "+max);
+        
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+//1. initial
+> git initial
+
+> git add .
+
+> git commit -am "code id bootcamp js"

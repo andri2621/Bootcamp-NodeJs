@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let uangBulanan = 0;
+        let cost = 0;
+        let inputNumber = Number(prompt("masukan uang bulanan anda : "))
+        let budget = inputNumber
+
+        while (inputNumber != -1) {
+            inputNumber = Number(prompt("masukkan biaya : (-1 untuk keluar"))
+            cost += inputNumber
+
+        }
+        let sisa = budget - cost;
+        alert("total budget : " + cost+ "sisa "+sisa);
+
+
+
+    </script>
+</body>
+
+</html>
