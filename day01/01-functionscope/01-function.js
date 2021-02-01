@@ -4,7 +4,7 @@ function foo(){
 }
 
 console.log(foo());
-
+////
 
 //function expression
 const fnc_exp = function (value){
