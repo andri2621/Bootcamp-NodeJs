@@ -1,0 +1,15 @@
+git init
+
+git add .
+
+git commit -am "isi pesannya disini"
+
+//creat new branch
+git checkout -b (nama branch tanpa tanda kurung)
+
+//switch brain (berpindah brain)
+git checkout (nama branch tanpa tanda kurung)
+
+//cara meng-alias-kan --graph
+//melihat seluruh commit
+alias graph="git log --all --decorate --oneline --graph"
