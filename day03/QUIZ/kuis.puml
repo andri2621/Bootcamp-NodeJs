@@ -1,0 +1,22 @@
+@startuml   kuis
+
+class Siswa{
+    NamaSiswa
+    kota
+    pendTerakhir
+    ipk
+    tipe
+    jenisBootcamp
+    batch
+    tahun
+}
+
+class Beasiswa extends Siswa{
+    insentif
+}
+
+class Reguler extends Siswa{
+    netPrice
+}
+
+@enduml
