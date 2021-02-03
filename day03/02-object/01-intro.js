@@ -9,12 +9,12 @@ const product = {
         core : "i7-9900HQ"
     }
 }
-
+//
 const infoProduct = info => {
     return `Info Product : ${info.names}, ${info.price}`
 }
 console.log(infoProduct(product))
-
+//
 //destructuring object with rest parameter
 const{id,...info} = product;
 console.log(id)
