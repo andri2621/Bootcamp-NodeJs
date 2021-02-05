@@ -7,7 +7,7 @@ class Trainner{
 class Jadwal{
     +waktu
 }
-
+'  kdakgsdg
 Trainner --|> Jadwal
 
 class Siswa{
