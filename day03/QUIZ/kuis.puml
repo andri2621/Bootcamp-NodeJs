@@ -1,5 +1,15 @@
 @startuml   kuis
 
+class Trainner{
+    +fullName
+}
+
+class Jadwal{
+    +waktu
+}
+
+Trainner --|> Jadwal
+
 class Siswa{
     NamaSiswa
     kota
@@ -18,5 +28,22 @@ class Beasiswa extends Siswa{
 class Reguler extends Siswa{
     netPrice
 }
+
+class Main{
+    +main():function
+}
+
+interface APIStudent{
+    +totalSiswa():int
+    +totalBea():int
+    +totalReg():int
+    +totalIns():int
+    +totalNet():int
+}
+
+Main -left-> APIStudent
+APIStudent -left-> Siswa
+APIStudent --> Beasiswa
+APIStudent --> Reguler
 
 @enduml

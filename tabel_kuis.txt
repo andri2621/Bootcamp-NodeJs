@@ -1,0 +1,90 @@
+CREATE TABLE Province (
+	prov_id SERIAL PRIMARY KEY,
+	prov_name VARCHAR (100)
+);
+
+CREATE TABLE City (
+	city_id  SERIAL PRIMARY KEY,
+	city_name VARCHAR (100),
+	city_prov_id INTEGER NOT NULL,
+	FOREIGN KEY (city_prov_id) REFERENCES Province (prov_id) ON UPDATE CASCADE ON DELETE CASCADE
+);
+
+CREATE TABLE Roles (
+	role_id SERIAL PRIMARY KEY,
+	role_name VARCHAR (25)
+);
+
+CREATE TABLE Users (
+	user_id SERIAL PRIMARY KEY,
+	user_name VARCHAR (55),
+	user_email VARCHAR (55),
+	user_password VARCHAR (255)
+);
+
+CREATE TABLE Category (
+	cate_id SERIAL PRIMARY KEY,
+	cate_name VARCHAR (25)
+);
+
+CREATE TABLE Product (
+	prod_id SERIAL PRIMARY KEY,
+	prod_title VARCHAR (25),
+	prod_description VARCHAR (255),
+	prod_stock INTEGER,
+	prod_price INTEGER,
+	prod_condition VARCHAR(15),
+	prod_manufacture VARCHAR(25),
+	prod_image VARCHAR(100),
+	prod_cate_id INTEGER NOT NULL,
+	FOREIGN KEY (prod_cate_id) REFERENCES Category (cate_id) ON UPDATE CASCADE ON DELETE CASCADE
+);
+
+CREATE TABLE Product_images (
+	prim_id VARCHAR(10) PRIMARY KEY,
+	prim_file_name VARCHAR (255),
+	prim_path VARCHAR (255),
+	prim_prod_id INTEGER NOT NULL,
+	FOREIGN KEY (prim_prod_id) REFERENCES Product (prod_id) ON UPDATE CASCADE ON DELETE CASCADE
+);
+
+CREATE TABLE Address (
+	addr_id SERIAL PRIMARY KEY,
+	addr_email VARCHAR (55),
+	addr_fullname VARCHAR (55),
+	addr_phone_number VARCHAR (18),
+	addr_is_default BOOLEAN,
+	addr_zipcode VARCHAR (55),
+	addr_street1 VARCHAR (255),
+	addr_street2 VARCHAR (255),
+	addr_user_id INTEGER NOT NULL,
+	addr_city_id INTEGER NOT NULL,
+	FOREIGN KEY (addr_user_id) REFERENCES Users (user_id) ON UPDATE CASCADE ON DELETE CASCADE,
+	FOREIGN KEY (addr_city_id) REFERENCES City (city_id) ON UPDATE CASCADE ON DELETE CASCADE
+);
+
+CREATE TABLE User_roles (
+	user_id INTEGER  NOT NULL,
+	role_id INTEGER  NOT NULL,	
+	FOREIGN KEY (user_id) REFERENCES Users (user_id) ON UPDATE CASCADE ON DELETE CASCADE,
+	FOREIGN KEY (role_id) REFERENCES Roles (role_id) ON UPDATE CASCADE ON DELETE CASCADE
+);
+
+CREATE TABLE Orders (
+	order_name VARCHAR (55),
+	order_created_on TIMESTAMP,
+	order_is_closed BOOLEAN,
+	order_total INTEGER,
+	order_user_id INTEGER NOT NULL,	
+	FOREIGN KEY (order_user_id) REFERENCES Users (user_id) ON UPDATE CASCADE ON DELETE CASCADE
+);
+
+CREATE TABLE Cart (
+	cart_id INTEGER  PRIMARY KEY,
+	cart_created_on TIMESTAMP,
+	cart_is_closed BOOLEAN,
+	cart_total INTEGER,
+	cart_user_id INTEGER NOT NULL,	
+	FOREIGN KEY (cart_user_id) REFERENCES Users (user_id) ON UPDATE CASCADE ON DELETE CASCADE
+);
+
