@@ -1,0 +1,71 @@
+INSERT INTO Roles(role_name) VALUES ('admin');
+INSERT INTO Roles(role_name) VALUES ('sales');
+INSERT INTO Roles(role_name) VALUES ('guest');
+
+
+INSERT INTO Product VALUES (2,'Kemeja Putih','Kemeja berbahan katun',10,150000,'baru','Pull n Bear','kemeja.jpg',1);
+INSERT INTO Product VALUES (3,'LED TV','tv android 50 inch',5,4300000,'baru','Samsung','samsung50.jpg',2);
+INSERT INTO Product VALUES (4,'Kursi Gaming','Kursi gaming empuk warna hitam-merah',3,1500000,'baru','Lion Star','KursiGaming.jpg',3);
+INSERT INTO Product VALUES (5,'Meja Makan','meja makan ukuran 2x3 meter',2,300000,'baru','Lion Star','MejaMkn.jpg',3);
+INSERT INTO Product VALUES (6,'Magicom','ukuran 3.5 Liter',7,200000,'baru','Miyako','Magicom1.jpg',3);
+
+INSERT INTO Orders VALUES ('ORD-260620#0001', '2014-07-02 06:14:00.742000000', True , 10 , 1);
+INSERT INTO Orders VALUES ('ORD-280620#0002', '2020-06-28 12:23:00.12', True ,  3 , 1);
+INSERT INTO Orders VALUES ('ORD-030720#0003', '2020-07-03 05:45:21.00', True ,  7 , 2);
+INSERT INTO Orders VALUES ('ORD-150720#0004', '2020-07-15 15:22:31.56', True ,  1 , 3);
+INSERT INTO Orders VALUES ('ORD-110820#0005', '2020-08-11 21:19:23.48', False , 2 , 2);
+INSERT INTO Orders VALUES ('ORD-020920#0006', '2020-09-02 22:01:05.11',  False , 2 , 2);
+
+INSERT INTO Cart (cart_id, cart_created_on, cart_is_closed, cart_total, cart_user_id)
+VALUES (1, '2014-07-02', True , 10, 1),
+(2, '2020-06-28', True ,  3, 2),
+(3, '2020-07-03', True ,  7, 3),
+(4, '2020-07-15', True ,  1, 1),
+(5, '2020-08-11', False , 2, 2),
+(6, '2020-09-02',  False , 2, 3);
+
+INSERT INTO Order_detail (ordi_quantity, ordi_price, ordi_cart_id, ordi_prod_id, ordi_order_name)
+VALUES (3, 500000, 1 , 1, 'ORD-260620#0001'),
+(5, 350000, 2 ,  3, 'ORD-260620#0001'),
+(2, 400000, 3 ,  2, 'ORD-280620#0002'),
+(4, 520000, 4 ,  6,'ORD-280620#0002' ),
+(1, 200000, 5 , 4, 'ORD-150720#0004'),
+(3, 150000,  6 , 5, 'ORD-110820#0005'),
+(3, 150000,  3 , 2, 'ORD-020920#0006');
+
+INSERT INTO Address 
+	(addr_id , addr_email , addr_fullname , addr_phone_number , addr_is_default , addr_zipcode , addr_street1 , addr_street2 , addr_user_id, addr_city_id) VALUES
+	(1,
+	 'andi@gmail.com' ,
+	 'Andi Setiawan' ,
+	 '089684239652' ,
+	 TRUE,
+	 '11640' ,
+	 'Jl. Lapangan Merah' ,
+	 'Joglo' ,
+	 1,
+	 1
+	),
+	
+	(2,
+	 'dafa@gmail.com' ,
+	 'Daffa' ,
+	 '085156552582' ,
+	 TRUE,
+	 '11290' ,
+	 'Jl. Raya Tasik' ,
+	 'Bungur' ,
+	 2,
+	 6
+	),
+		(3,
+	 'ahmad@gmail.com' ,
+	 'Ahmad' ,
+	 '0877745312990' ,
+	 TRUE,
+	 '10271' ,
+	 'Jl. Djuanda' ,
+	 'Dago' ,
+		 3,
+	 5
+	);

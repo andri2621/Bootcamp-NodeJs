@@ -18,7 +18,7 @@ define('pgadmin.browser.utils',
   pgBrowser['panels_items'] = '[{"canHide": true, "content": "", "data": null, "events": null, "height": 600, "icon": "", "isCloseable": true, "isIframe": false, "isPrivate": false, "limit": 1, "name": "dashboard", "priority": 1, "showTitle": true, "title": "Dashboard", "width": 500}]';
 
   pgAdmin['csrf_token_header'] = 'X-pgA-CSRFToken';
-  pgAdmin['csrf_token'] = 'ImQzOGUyNjAzZGJhMTNkY2I5ODBkZDg3NmRjY2JhMTQ3YjY0MjMwNmMi.YBt9WQ.k9L0wrcVfhAP9wYX-Nm703YcLdM';
+  pgAdmin['csrf_token'] = 'ImQzOGUyNjAzZGJhMTNkY2I5ODBkZDg3NmRjY2JhMTQ3YjY0MjMwNmMi.YBzKMA.0kYXpV9yylG2KTkjKCm_iNkZVEw';
   pgAdmin['server_mode'] = 'False';
 
   /* Get the inactivity related config */
@@ -33,7 +33,7 @@ define('pgadmin.browser.utils',
   ];
 
   pgBrowser.utils = {
-    layout: '{"floating":[],"root":{"type":"wcSplitter","horizontal":true,"isDrawer":false,"pane0":{"type":"wcFrame","floating":false,"isFocus":false,"tabOrientation":"top","pos":{"x":0.5,"y":0.5},"size":{"x":300,"y":600},"tab":0,"panels":[{"type":"wcPanel","panelType":"browser","size":{"x":300,"y":600},"customData":{}}]},"pane1":{"type":"wcFrame","floating":false,"isFocus":false,"tabOrientation":"top","pos":{"x":0.5,"y":0.5},"size":{"x":500,"y":600},"tab":7,"panels":[{"type":"wcPanel","panelType":"dashboard","size":{"x":500,"y":600},"customData":{}},{"type":"wcPanel","panelType":"properties","size":{"x":500,"y":600},"customData":{}},{"type":"wcPanel","panelType":"sql","size":{"x":500,"y":600},"customData":{}},{"type":"wcPanel","panelType":"statistics","size":{"x":500,"y":600},"customData":{}},{"type":"wcPanel","panelType":"dependencies","size":{"x":500,"y":600},"customData":{}},{"type":"wcPanel","panelType":"dependents","size":{"x":500,"y":600},"customData":{}},{"type":"wcPanel","panelType":"frm_datagrid","size":{"x":300,"y":600},"customData":{}},{"type":"wcPanel","panelType":"frm_datagrid","size":{"x":300,"y":600},"customData":{}}]},"pos":0.2608535688005887}}',
+    layout: '{"floating":[],"root":{"type":"wcSplitter","horizontal":true,"isDrawer":false,"pane0":{"type":"wcFrame","floating":false,"isFocus":false,"tabOrientation":"top","pos":{"x":0.5,"y":0.5},"size":{"x":300,"y":600},"tab":0,"panels":[{"type":"wcPanel","panelType":"browser","size":{"x":300,"y":600},"customData":{}}]},"pane1":{"type":"wcFrame","floating":false,"isFocus":false,"tabOrientation":"top","pos":{"x":0.5,"y":0.5},"size":{"x":500,"y":600},"tab":9,"panels":[{"type":"wcPanel","panelType":"dashboard","size":{"x":500,"y":600},"customData":{}},{"type":"wcPanel","panelType":"properties","size":{"x":500,"y":600},"customData":{}},{"type":"wcPanel","panelType":"sql","size":{"x":500,"y":600},"customData":{}},{"type":"wcPanel","panelType":"statistics","size":{"x":500,"y":600},"customData":{}},{"type":"wcPanel","panelType":"dependencies","size":{"x":500,"y":600},"customData":{}},{"type":"wcPanel","panelType":"dependents","size":{"x":500,"y":600},"customData":{}},{"type":"wcPanel","panelType":"frm_datagrid","size":{"x":300,"y":600},"customData":{}},{"type":"wcPanel","panelType":"frm_datagrid","size":{"x":300,"y":600},"customData":{}},{"type":"wcPanel","panelType":"frm_datagrid","size":{"x":300,"y":600},"customData":{}},{"type":"wcPanel","panelType":"frm_datagrid","size":{"x":300,"y":600},"customData":{}}]},"pos":0.24590005277195678}}',
     pg_help_path: 'https://www.postgresql.org/docs/$VERSION$/',
     edbas_help_path: 'https://www.enterprisedb.com/edb-docs/d/postgresql/reference/manual/$VERSION$/',
     tabSize: '4',

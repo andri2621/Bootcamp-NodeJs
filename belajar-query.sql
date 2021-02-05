@@ -20,5 +20,19 @@ join locations l on b.country_id=l.country_id
 join departments d on l.location_id = d.location_id
 group by a.region_id, b.country_name, a.region_name
 
+-- tampilkan employe yg gajinya paling tinggi tiap departmen
+select first_name, max(salary) as salary, department_name
+from employees e join departments d on e.department_id = d.department_id
+group by department_name
+order by salary desc
+
+-- jumlah pegawai di tiap country
+select distinct c.country_name, count(e.employee_id) as jumlah_pegawai
+from countries c join locations l on c.country_id = l.country_id
+join departments d on l.location_id = d.location_id
+join employees e on d.department_id=e.department_id
+group by c.country_name, e.first_name
+
+
 
 
