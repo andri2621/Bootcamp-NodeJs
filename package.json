@@ -1,7 +1,16 @@
 {
-    "name"      : "bootcamp-nodejs",
-    "version"   : "1.0.0",
-    "main"      : "index.js",
-    "type"      : "module",
-    "license"   : "MIT"
+    "name": "bootcamp-nodejs",
+    "version": "1.0.0",
+    "main": "index.js",
+    "type": "module",
+    "license": "MIT",
+    "scripts": {
+        "build:css": "tailwindcss build ./src/style.css -o dist/style.css", 
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "dependencies": {
+        "autoprefixer": "^10.2.4",
+        "postcss": "^8.2.4",
+        "tailwindcss": "^2.0.2"
+    }
 }
