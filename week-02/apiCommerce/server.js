@@ -16,7 +16,8 @@ const fs = require('fs');
 const app = express();
 
 const port = process.env.PORT || 1337;
-app.listen(port, () => console.log(`Server listening on port ${port}`));
+
+
 
 //IMPORT API
 const {readProvince, addProvince, editProvince, filterProvince, deleteProvince} = require('./api-province.js');
@@ -27,6 +28,9 @@ const { readCity, addCity, editCity, filterCity, deleteCity } = require('./api-c
 const { readUserRoles, addUserRoles, editUserRoles, filterUserRoles, deleteUserRoles} = require('./api-user-roles.js');
 const { readProduct, addProduct, editProduct, filterProduct, deleteProduct } = require('./api-product.js');
 const { readAddress, addAddress, editAddress, filterAddress, deleteAddress } = require('./api-address.js');
+const { readProductImages, addProductImages, editProductImages, filterProductImages, deleteProductImages } = require('./api-product-images.js');
+const { readCart, addCart, editCart, filterCart, deleteCart } = require('./api-cart.js');
+
 
 app.use(cors());
 app.use(express.urlencoded({extended : true}));
@@ -40,6 +44,7 @@ app.use(express.json());
 app.get("/", responseText);
 app.get("/json", responseJson);
 app.get("/static/*", responseStatic);
+app.listen(port, () => console.log(`Server listening on port ${port}`));
 
 
 //panggil province
@@ -97,6 +102,21 @@ addAddress(app, pool);
 editAddress(app, pool);
 filterAddress(app, pool);
 deleteAddress(app, pool);
+
+//panggil Product_images
+readProductImages(app, pool);
+addProductImages(app, pool);
+editProductImages(app, pool);
+filterProductImages(app, pool);
+deleteProductImages(app, pool);
+
+//panggil Cart
+readCart(app, pool);
+addCart(app, pool);
+editCart(app, pool);
+filterCart(app, pool);
+deleteCart(app, pool);
+
 
 
 function responseText(req, res){

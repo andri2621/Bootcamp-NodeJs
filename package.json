@@ -1,7 +1,10 @@
 {
-    "name"      : "bootcamp-nodejs",
-    "version"   : "1.0.0",
-    "main"      : "index.js",
-    "type"      : "module",
-    "license"   : "MIT"
+    "name": "bootcamp-nodejs",
+    "version": "1.0.0",
+    "main": "index.js",
+    "type": "module",
+    "license": "MIT",
+    "dependencies": {
+        "express": "^4.17.1"
+    }
 }
